@@ -11,6 +11,7 @@ public class CalculatorButtons {
     private final GridPane layout = new GridPane();
     private final Button[][] buttons = new Button[4][4];
     private final CalculatorScreen screen;
+
     public CalculatorButtons(CalculatorScreen screen, double width, double height) {
         this.screen = screen;
         layout.setMinWidth(width);
@@ -22,9 +23,11 @@ public class CalculatorButtons {
     public GridPane getLayout() {
         return layout;
     }
+
     public void setHeight(double height) {
         layout.setPrefHeight(height + 20);
     }
+
     public void setWidth(double width) {
         layout.setPrefWidth(width + 40);
     }

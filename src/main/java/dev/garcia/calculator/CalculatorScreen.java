@@ -13,6 +13,7 @@ public class CalculatorScreen {
     private final Label lblOperator = new Label();
     private final Label lblOutput = new Label();
     private final TextField txtInput = new TextField();
+
     public CalculatorScreen(double width, double height) {
         layout.setMinWidth(width);
         layout.setMinHeight(height * 0.25);
@@ -22,30 +23,39 @@ public class CalculatorScreen {
     public VBox getLayout() {
         return layout;
     }
+
     public void setHeight(double height) {
         layout.setPrefHeight(height + 20);
     }
+
     public void setWidth(double width) {
         layout.setPrefWidth(width + 20);
     }
+
     public void setOperator(String operator) {
         lblOperator.setText(operator);
     }
+
     public void setOutput(String output) {
         lblOutput.setText(output);
     }
+
     public void setInput(String input) {
         txtInput.setText(input);
     }
+
     public void txtFocus() {
         txtInput.requestFocus();
     }
+
     public String getOutput() {
         return lblOutput.getText();
     }
+
     public String getInput() {
         return txtInput.getText();
     }
+
     public String getOperator() {
         return lblOperator.getText();
     }
@@ -86,7 +96,7 @@ public class CalculatorScreen {
         layout.heightProperty().addListener((obs, oldVal, newVal) -> {
             double height = newVal.doubleValue();
             boxLabel.setPrefHeight(height / 2);
-            txtInput.setPrefHeight(height /2);
+            txtInput.setPrefHeight(height / 2);
         });
 
         boxLabel.widthProperty().addListener((obs, oldVal, newVal) -> {
