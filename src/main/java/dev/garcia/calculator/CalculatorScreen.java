@@ -16,7 +16,6 @@ public class CalculatorScreen {
     public CalculatorScreen(double width, double height) {
         layout.setMinWidth(width);
         layout.setMinHeight(height * 0.25);
-
         createScreen();
     }
 
